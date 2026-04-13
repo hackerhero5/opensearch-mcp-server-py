@@ -43,14 +43,6 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
-      - name: Configure AWS credentials
-        id: aws-creds
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          role-to-assume: ${{ secrets.OPENSEARCH_MCP_CI_ROLE }}
-          aws-region: us-west-2
-          output-credentials: true
-
       - name: Set up Python 3
         uses: actions/setup-python@v5
         with:
